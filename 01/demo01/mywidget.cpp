@@ -24,6 +24,19 @@ MyWidget::MyWidget(QWidget *parent) :
     this->resize(600,600);
     this->setFixedSize(600,600);
     this->setWindowTitle("window_title");
+
+
+    //设置第三个按钮，关闭当前窗口
+    q3=new QPushButton(QString::fromLocal8Bit("关闭窗口"),this);
+    q3->move(200,500);
+
+    //QT5中建议使用该种使用函数地址的重载形式，QT4中无该重载
+    connect(q3,&QPushButton::clicked,this,&QWidget::close);
+
+    //QT4中只能使用该种，无类型检查和补全提示，感觉很垃圾……
+    //connect(q3,SIGNAL(clicked(bool)),this,SLOT(close()));
+
+
 }
 
 MyWidget::~MyWidget()

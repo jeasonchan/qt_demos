@@ -24,6 +24,7 @@ private:
 
     QPushButton *q1;
     QPushButton *q2;
+    QPushButton *q3;
 
 };
 
