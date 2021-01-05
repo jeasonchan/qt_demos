@@ -10,7 +10,7 @@ MyWidget::MyWidget(QWidget *parent) :
   //使用类成员对象的方式设置一个按钮，最佳实践其实就是通过增加成员对象来增加元素
   //但是，最佳实践是设置对象指针，而不是一个类对象,且不需要自己在析构函数中手动管理delete
   this->q1=new QPushButton();
-  //    this->q1->setText(QString::fromLocal8Bit("button_1号"));  根据源文件的编码，将入参的字面转为8位unicode
+//      this->q1->setText(QString::fromLocal8Bit("button_1号"));  //根据源文件的编码，将入参的字面转为8位unicode
   //    this->q1->setText("button_1号");  直接使用原生的
   this->q1->setText(QString::fromUtf8("button_1号"));  //根据utf8规则，将入参转为unicode码
 
